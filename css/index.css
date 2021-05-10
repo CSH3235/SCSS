@@ -115,3 +115,21 @@ face 안에 속성이 들어오는게 아니라 circle 옆에 face가 추가된�
   margin-right: auto;
   margin-top: 35px;
 }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 200px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: #fff;
+}
