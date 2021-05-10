@@ -1,0 +1,117 @@
+@charset "UTF-8";
+body {
+  background: #242424;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #7cdf70;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.First {
+  height: 200px;
+  width: 200px;
+  border: 3px solid #7cdf70;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+.Second {
+  height: 100px;
+  width: 100px;
+  background: #7cdf70;
+}
+
+.Second .Third {
+  height: 50px;
+  width: 50px;
+  background: #242424;
+}
+
+.First:hover {
+  border-color: royalblue;
+}
+
+/*
+1) 상속 : @extend 선택자 : 똑같은 내용을 그대로 받는다.
+
+face 안에 속성이 들어오는게 아니라 circle 옆에 face가 추가된다.
+(circle, face {})
+
+변수와 다르게 여러개의 속성을 재활용 할 수 있다
+*/
+.circle, .face, .face_1, .circle_1 {
+  width: 100px;
+  height: 100px;
+  background: #7cdf70;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+.face, .face_1 {
+  border: 5px solid #fff;
+}
+
+.circle_1 {
+  border-radius: 50%;
+}
+
+.face_1 {
+  border-radius: 50%;
+}
+
+.a1 {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: red;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+.a2 {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: red;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+.a3 {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: red;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+.function {
+  width: 100px;
+  height: 200px;
+  background: #7cdf70;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}

@@ -1,0 +1,114 @@
+$color: #7cdf70; // 전역변수
+
+body {
+    background: #242424;
+}
+
+h1 {
+    $font-color: #fff;
+    color: $font-color;// 지역변수 (!넣으면 전역변수)
+    text-align: center;
+}
+
+.box {
+    $box-width: 200px - 100px;
+    width: $box-width;
+    height: (300px / 3);
+    background: $color;
+    right:0; margin-left:auto; margin-right:auto;
+}
+
+.First {
+    height: 200px;
+    width: 200px;
+    border: 3px solid $color;
+    right:0; margin-left:auto; margin-right:auto; margin-top: 35px;
+
+    @at-root .Second {
+        height: 100px;
+        width: 100px;
+        background: $color;
+
+        .Third {
+            height: 50px;
+            width: 50px;
+            background: #242424;
+        } // 중첩의 중첩
+    } // 중첩 (변환된 css파일에서 .First.Second 대신 .Second로 나타냄)
+
+    &:hover {
+        border-color: royalblue;
+    } // & 안붙이면 자식에게 hover가 붙는다
+    // &를 붙이면 .css에서 띄어쓰기가 없어짐 (자식태그 x)
+}
+
+// 상속 & import (가족)
+
+/*
+1) 상속 : @extend 선택자 : 똑같은 내용을 그대로 받는다.
+
+face 안에 속성이 들어오는게 아니라 circle 옆에 face가 추가된다.
+(circle, face {})
+
+변수와 다르게 여러개의 속성을 재활용 할 수 있다
+*/
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: $color;
+    right:0; margin-left:auto; margin-right:auto; margin-top: 35px;
+}
+.face {
+    @extend .circle; // 상속
+    border: 5px solid #fff;
+}
+
+@import "import.scss"; // 다른 파일에서 변수 가져옴
+
+.circle_1 {
+    @extend .circle;
+    border-radius: $make-cirle;
+}
+
+.face_1 {
+    @extend .face;
+    border-radius: $make-cirle;
+}
+
+//mixin : @mixin 믹스인이름(변수속성값);
+
+$control-margin: 10px;
+
+@mixin  afriends($color) {
+    width: 100px;
+    height: 100px;
+    margin: $control-margin;
+    background: $color;
+    right:0; margin-left:auto; margin-right:auto; margin-top: 35px;
+}
+
+.a1 {
+    @include afriends(red)
+}
+
+.a2 {
+    @include afriends(red)
+}
+
+.a3 {
+    @include afriends(red)
+}
+
+// 함수 : function 함수명($변수1, ...$변수n)
+
+@function randomName($width, $number) {
+    @return $width / $number;
+}
+
+.function {
+    width: randomName(1000px, 10);
+    height: 200px;
+    background: $color;
+    right:0; margin-left:auto; margin-right:auto; margin-top: 35px;
+}
