@@ -114,6 +114,7 @@ $control-margin: 10px;
 }
 
 nav {
+    text-align: center; margin-top: 35px;
     ul {
         margin: 0;
         padding: 0;
@@ -128,5 +129,6 @@ nav {
         padding: 6px 12px;
         text-decoration: none;
         color: #fff;
+        text-align: center;
     }
 }
