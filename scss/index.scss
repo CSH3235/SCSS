@@ -114,6 +114,7 @@ $control-margin: 10px;
 }
 
 nav {
+    text-align: center; margin-top: 35px;
     ul {
         margin: 0;
         padding: 0;
@@ -128,5 +129,34 @@ nav {
         padding: 6px 12px;
         text-decoration: none;
         color: #fff;
+        text-align: center;
     }
+}
+
+%Extend_box_size {
+    border: 3px solid #7cdf70;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    right:0; margin-left:auto; margin-right:auto; margin-top: 35px;
+}
+
+%Extend_box_size_1 {
+    border: 1px solid rebeccapurple;
+    padding: 10px;
+}
+
+.Extend_box_1 {
+    @extend %Extend_box_size;
+    border-color: #00A2B7;
+}
+
+.Extend_box_2 {
+    @extend %Extend_box_size;
+    border-color: #3B4881;
+}
+
+.Extend_box_3 {
+    @extend %Extend_box_size;
+    border-color: #00CA78;
 }

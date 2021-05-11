@@ -116,6 +116,11 @@ face 안에 속성이 들어오는게 아니라 circle 옆에 face가 추가된�
   margin-top: 35px;
 }
 
+nav {
+  text-align: center;
+  margin-top: 35px;
+}
+
 nav ul {
   margin: 0;
   padding: 0;
@@ -132,4 +137,28 @@ nav a {
   padding: 6px 12px;
   text-decoration: none;
   color: #fff;
+  text-align: center;
+}
+
+.Extend_box_1, .Extend_box_2, .Extend_box_3 {
+  border: 3px solid #7cdf70;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+.Extend_box_1 {
+  border-color: #00A2B7;
+}
+
+.Extend_box_2 {
+  border-color: #3B4881;
+}
+
+.Extend_box_3 {
+  border-color: #00CA78;
 }
